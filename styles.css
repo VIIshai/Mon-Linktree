@@ -1,0 +1,148 @@
+/* Réinitialisation des marges et padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général du body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #353535;
+    color: #330101;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Pour empêcher le défilement */
+}
+
+/* Styles du header */
+.site-header {
+    margin-bottom: 50px;
+    padding: 40px;
+}
+
+.site-logo {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.site-title {
+    font-size: 2rem;
+    color: #240101;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.site-subtitle {
+    font-size: 1rem;
+    color: #2e0101;
+    margin-top: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Section des liens */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.link-card {
+    background-color: #111111;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(51, 1, 1, 0.897);
+    transition: transform 0.3s ease-in-out;
+    animation: slideIn 1s ease-out;
+}
+
+.link-card:hover {
+    transform: scale(1.05); /* Micro-animation lors du survol */
+}
+
+.link-card h3 {
+    font-size: 1.25rem;
+    color: #2b0101;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0e0d0d;
+    color: #290101;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.link-btn:hover {
+    background-color: #fdfbfb; /* Micro-animation lors du survol */
+}
+
+.site-footer {
+    margin-top: 30px;
+    color: #141414;
+}
+
+/* Animations en CSS pur */
+
+/* Animation de fondu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation de slide-in */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .link-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .link-card {
+        width: 100%;
+    }
+
+    .link-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
